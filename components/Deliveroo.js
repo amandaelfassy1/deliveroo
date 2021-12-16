@@ -13,6 +13,7 @@ import {
   isDarkMode,
 } from 'react-native';
 import React from 'react';
+import LottieView from 'lottie-react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {
   faSortAmountDown,
@@ -36,7 +37,12 @@ export default function Deliveroo() {
                 />
                 <Text style={styles.adress}> Rue Yves Toudic</Text>
               </View>
-              <FontAwesomeIcon icon={faUserCircle} size={30} />
+              <LottieView
+                style={styles.user}
+                source={require('../assets/user.json')}
+                autoPlay
+                loop
+              />
             </View>
 
             <View style={styles.btn}>
@@ -152,6 +158,10 @@ const styles = StyleSheet.create({
   },
   content: {
     margin: 10,
+  },
+  user: {
+    height: 90,
+    width: 90,
   },
 
   filter: {
